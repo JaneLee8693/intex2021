@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="height: 300px; background-color: #93C5FD;">
+    <div style="max-width: 1000px; margin-left: auto; margin-right: auto; padding: 60px 5px 10px 5px;">
+        <div style="font-size: 53px; font-weight: bold; color: white; ">
+            ML Models
+        </div>
+        <div style="max-width: 500px; color: #272727">
+            Using data from around the country on prescribers and drugs, we have build two machine learning models: a predictor and a recommender.
+        </div>
+        <div style="margin-top: 20px;">
+            <a class="altNavbarItem" href={% url 'learnMore'%}>
+                Learn More
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="caretIcon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="black"/>
+                </svg>
+            </a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #F9F9F9; padding: 30px 0px 200px 0px">
+    
+    <div style="max-width: 700px; background-color: white; padding: 20px; margin-right: auto; margin-left: auto; border-radius: 10px;">
+        <div style="display: flex; justify-content: space-between; ">
+            <div style="font-size: 30px; font-weight: bold;">
+                Recommender
+            </div>
+            <a class="altButton" href={% url 'recommender'%}>
+                Go To Recommender
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="caretIcon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="black"/>
+                </svg>
+            </a>
+        </div>
+        <div style="max-width: 400px;">
+            Our first model is a recommender that recommends drugs for a given prescriber.        </div> 
+    </div>
+    <div style="max-width: 700px; background-color: white; padding: 20px; margin-right: auto; margin-left: auto; border-radius: 10px; margin-top: 40px;">
+        <div style="display: flex; justify-content: space-between; ">
+            <div style="font-size: 30px; font-weight: bold;">
+                Predictor
+            </div>
+            <a class="altButton" href={% url 'predictor'%}>
+                Go To Predictor
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="caretIcon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="black"/>
+                </svg>
+            </a>
+        </div>
+        <div style="max-width: 400px;">
+            Our second model takes prescriber information and predicts how many of a certain drug they will prescribe.
+        </div> 
+    </div>
+    
+
+</div>
+{% endblock %}

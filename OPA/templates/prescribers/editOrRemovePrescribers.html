@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="height: 200px; background-color: #93C5FD;">
+    <div style="max-width: 1000px; margin-left: auto; margin-right: auto; padding: 60px 5px 10px 5px;">
+        <div style="font-size: 53px; font-weight: bold; color: white; ">
+            EDIT OR REMOVE PRESCRIBERS
+        </div>
+    </div>
+</div>
+<div style="background-color: #F9F9F9; padding: 30px 0 15px 0; font-size: 18px;">
+    <div style="max-width: 700px; margin: 0px auto 0px auto; ">
+        <form method=POST action={% url 'editOrRemovePrescribers'%}>
+            {% csrf_token %}
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between;">
+                <div style="width: 45%">
+                    <label>Prescriber First Name:</label>
+                    <input type="search" placeholder="First Name" name="pFirstName" 
+                    style="border: 0px; border-bottom: 1px #272727 solid; width: 100%; padding: 14px 0 14px 0
+                        background-color: #F9F9F9; font-size: 18px; display: block;"/>
+                </div>
+                <div style="width: 45%">
+                    <label>Prescriber Last Name:</label>
+                    <input type="search" placeholder="Last Name" name="pLastName" 
+                    style="border: 0px; border-bottom: 1px #272727 solid; width: 100%; padding: 14px 0 14px 0
+                        background-color: #F9F9F9; font-size: 18px; display: block;"/>
+                </div>
+            </div>
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between;">
+                <div style="width: 45%">
+                    <label>Prescriber Specialty:</label>
+                    <input type="search" placeholder="Specialty" name="pSpecialty" 
+                    style="border: 0px; border-bottom: 1px #272727 solid; width: 100%; padding: 14px 0 14px 0
+                        background-color: #F9F9F9; font-size: 18px; display: block;"/>
+                </div>
+
+                 <div style="width: 45%">
+                    <label>Prescriber Credential:</label>
+                    <input type="search" placeholder="Credential" name="pCredential" 
+                    style="border: 0px; border-bottom: 1px #272727 solid; width: 100%; padding: 14px 0 14px 0
+                        background-color: #F9F9F9; font-size: 18px; display: block;"/>
+                </div> 
+            </div>
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between;">
+                <div style="width: 45%">
+                    <label>Prescriber State:</label>
+                    <input type="search" placeholder="Location" name="pState" 
+                    style="border: 0px; border-bottom: 1px #272727 solid; width: 100%; padding: 14px 0 14px 0
+                        background-color: #F9F9F9; font-size: 18px; display: block;"/>
+                </div>
+                <div style="width: 45%">
+                    <label style="display: block">Prescriber Gender<label>
+                    <select style="display: block" name="pGender">
+                        <option value="Any">Any</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                        <option value="O">Other</option>
+                    </select>
+                </div>
+            </div> 
+            <div>
+                <button type="submit" class="submitButton" style="">
+                    Search
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div style="background-color: #F9F9F9;">
+    <div style="max-width: 700px; margin: 0px auto 0px auto; text-align: center; color: #8F8F8F;">
+        Click on a prescriber to learn more.
+    </div>
+</div>
+<div style="background-color: #F9F9F9; padding: 15px 0px 30px 0px">
+    {% for prescriber in prescribers %}
+    <a class="drugButton" style="color: #272727; text-decoration: none;" href={% url "singlePrescriber" id=prescriber.id %} >
+        <div  style="max-width: 700px; margin-right: auto; margin-left: auto; background-color: white; border-radius: 5px;
+        padding: 10px; border: #93C5FD 1px solid; margin-bottom: 10px; margin-top: 10px; ">
+            <div style="display: flex; justify-content: space-between">
+                <div>
+                    <div style="font-weight: bold;">{{prescriber.firstName }} {{prescriber.lastName }}
+                    {% for c in prescriber.prescriber_credential_field.all %}
+                        <span style="margin-left: -4px;">,</span> {{c.credentialName}}
+                    {% endfor %}
+                    </div>
+                    <div style="font-size: 12px;">
+                        <div>Specialty: {{prescriber.specialtyId}}</div>
+                        <div>Location: {{prescriber.state}}</div>
+                        <div>Gender: {{prescriber.gender}}</div>
+                    </div>
+                </div>
+                <div style="display: flex; flex-direction: column; margin-top: 5px;">
+                    <a style="margin-bottom: 8px; text-decoration: none; color: black"  href={% url 'editPrescriber' id=prescriber.id %}>
+                        Edit
+                    </a>
+                    <a style="color: red; text-decoration: none;" href={% url 'deletePrescriber' id=prescriber.id%}>
+                        Remove
+                    </a>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %} 
+</div> 
+{% endblock %}

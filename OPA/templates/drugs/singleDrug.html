@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="height: 200px; background-color: #93C5FD;">
+    <div style="max-width: 1000px; margin-left: auto; margin-right: auto; padding: 60px 5px 10px 5px;">
+        <div style="font-size: 53px; font-weight: bold; color: white; ">
+            {{drug.drugName}}
+        </div>
+    </div>
+</div>
+<div style="background-color: #F9F9F9; padding: 30px 0 30px 0;">
+    <div style="max-width: 700px; background-color: white; margin: 0px auto 0px auto; padding: 10px; border-radius: 10px;">
+        <div style="margin: 10px 0 20px 0; font-size: 20px;">
+        {% if drug.isOpioid %}
+        {{drug.drugName}} is an opioid.
+        {% else %}
+        {{drug.drugName}} is not an opioid.
+        {% endif %}
+        </div>
+        <div>
+        Here are the top 10 prescribers of {{drug.drugName}}:
+        </div>
+        {% for p in prescribedDrugs %}
+        <a class="drugButton" style="color: #272727; text-decoration: none; "  href={% url 'singlePrescriber' id=p.prescriber.id %}>
+            
+            <div  style="max-width: 700px; margin-right: auto; margin-left: auto; background-color: white; border-radius: 5px;
+            padding: 10px; border: #93C5FD 1px solid; margin-bottom: 10px; margin-top: 10px; display: flex">
+            <div>{{forloop.counter}}.&nbsp;</div>
+            <div>
+                <div style="font-weight: bold;"> {{p.prescriber.firstName}} {{p.prescriber.lastName}}</div> 
+                <div>Quantity: {{p.drugQuantity}}</div>
+            </div>
+            </div>
+        </a>
+        
+            
+        {% endfor %}
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,242 @@
+html, body, p, a, div, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;;
+}
+
+.navbarContainer {
+    background-color: #93C5FD;
+    width: 100%;
+}
+.navbarWrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px 20px 10px;
+}
+
+.headerTitle {
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+}
+
+
+.navbarItem {
+    padding: 12px;
+    font-size: 14px;
+    color: white;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+.navbarItem:link {
+    color: white;
+    text-decoration: none;
+}
+.navbarItem:visited {
+    color: white;
+    text-decoration: none;
+}
+.navbarItem:hover {
+    color: #272727;
+    text-decoration: none;
+}
+.navbarItem:active {
+    color: white;
+    text-decoration: none;
+}
+
+.altNavbarItem {
+    padding: 10px;
+    padding-right: 4px;
+    font-size: 14px;
+    background-color: white;
+    color: #272727;
+    fill: #272727;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    border-radius: 5px;
+}
+.altNavbarItem:link {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.altNavbarItem:visited {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.altNavbarItem:hover {
+    background-color: #D9EAFE;
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.altNavbarItem:active {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+
+
+.headerWrap a:link {
+    color: white;
+    text-decoration: none;
+}
+.headerWrap a:visited {
+    color: white;
+    text-decoration: none;
+}
+.headerWrap a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.footerContainer {
+    width: 1000px;
+    margin: 50px auto 50px auto;
+    display: grid; 
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.footerTitle {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.footerItem {
+    color:#272727;
+    text-decoration: none;
+    margin: 20px 0 20px 0;
+    display: block;
+    font-size: 16px;
+}
+.footerItem:link {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.footerItem:visited {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.footerItem:hover {
+    color: #93C5FD;
+    text-decoration: none;
+}
+.footerItem:active {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+
+
+.caretIcon {
+    transform: translate(0px,6px);
+    -ms-transform: translate(0px,6px); /* IE 9 */
+    -webkit-transform: translate(0px,6px); /* Safari and Chrome */
+    -o-transform: translate(0px,6px); /* Opera */
+    -moz-transform: translate(0px,6px); /* Firefox */
+}
+.usaIcon {
+    transform: translate(0px,-3px);
+    -ms-transform: translate(0px,-3px); /* IE 9 */
+    -webkit-transform: translate(0px,-3px); /* Safari and Chrome */
+    -o-transform: translate(0px,-3px); /* Opera */
+    -moz-transform: translate(0px,-3px); /* Firefox */
+}
+
+.altButton {
+    padding: 10px;
+    padding-top: 3px;
+    padding-right: 4px;
+    font-size: 14px;
+    background-color: #93C5FD;
+    color: #272727;
+    fill: #272727;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    border-radius: 5px;
+
+}
+.altButton:link {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.altButton:visited {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.altButton:hover {
+    background-color: #a3b5c9;
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+.altButton:active {
+    color: #272727;
+    text-decoration: none;
+    fill: #272727;
+}
+
+.submitButton {
+    background: #93C5FD;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.removeButton {
+    background-color: white;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    padding: 10px 20px 10px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-20 {
+    margin-bottom: 40px;
+}
+
+.lTitle {
+    font-weight: bold;
+    font-size: 30px;
+}
+

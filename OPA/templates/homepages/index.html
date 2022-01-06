@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="heroContainer" style="display: flex; justify-content: center; ">
+
+        <div style="margin-bottom: 40px;">
+            <img src={% static '/images/crossbones.png'%}/>
+        </div>
+</div>
+ 
+<div style=" padding: 30px 0px 30px 0px">
+    <div style="max-width: 500px; margin: 30px auto 30px auto;">
+         Over the past several decades in the Unites States, drugs have become an an increasingly prevelent and deadly problem.
+         Hundreds of Americans die from overdose every day. More than half of these deaths are caused by opioids.
+
+    </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));">
+            <div style="background-color: #F9F9F9; max-width: 300px; background-color: white; padding: 20px; margin-right: auto; margin-left: auto; border-radius: 10px;">
+                <div style="">
+                    <div style="font-size: 30px; font-weight: bold;">
+                        Drugs
+                    </div>
+                    
+                </div>
+                <div style="margin-top: 20px;">
+                    There are hundreds of drugs that americans become addicted to every year.
+                    Our system aims to keep track of these drugs. We also looks specificially 
+                    at whether these drugs are opioids or not. 
+                </div>
+                <div style="margin-top: 20px;">
+                    <a class="altButton" href={% url 'searchDrugs'%}>
+                        Drugs
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="caretIcon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div style="background-color: #F9F9F9; max-width: 300px; background-color: white; padding: 20px; margin-right: auto; margin-left: auto; border-radius: 10px;">
+                <div style="display: flex; flex-direction: column; justify-content: space-between">
+                    <div style="font-size: 30px; font-weight: bold;">
+                        Prescribers
+                    </div>
+                    
+                </div>
+                <div style="margin-top: 20px;">
+                    Along with drugs, this webiste tracks the medical personnel that prescribe them.
+                    We track how much they prescribe and how they compare to other prescribers. 
+                </div>
+                <div style="margin-top: 38px;">
+                    <a class="altButton" style="margin-top: 15px; margin: auto 0 auto" href={% url 'searchPrescribers'%}>
+                        Prescribers
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="caretIcon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div style="background-color: #F9F9F9; max-width: 300px; background-color: white; padding: 20px; margin-right: auto; margin-left: auto; border-radius: 10px;">
+                <div style="">
+                    <div style="font-size: 30px; font-weight: bold;">
+                        Learn More
+                    </div>
+                    
+                </div>
+                <div style="margin-top: 20px;">
+                    One of our goals is to educate the public on the problem of the opioid epidemic. 
+                    Far too many people are unaware of what is happening in our country and around the world.
+                </div>
+                <div style="margin-top: 20px;">
+                    <a class="altButton" href={% url 'learnMore'%}>
+                        Learn
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="caretIcon">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="black"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+       
+</div>
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div style="height: 200px; background-color: #93C5FD;">
+    <div style="max-width: 1000px; margin-left: auto; margin-right: auto; padding: 60px 5px 10px 5px;">
+        <div style="font-size: 53px; font-weight: bold; color: white; ">
+            HISTORY
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #F9F9F9; padding: 30px 0 50px 0;">
+    <div style="max-width: 900px; margin: 0px auto 0px auto; background-color: white; padding: 30px; border-radius: 10px;">
+        <div>
+            <div class="lTitle">History of the Opioid Crisis</div>
+                <ul>
+                    <li class="lsTitle mt-20" >Overdose Waves</li>
+                    <img style="margin-top: 20px; height: 200px" src={% static '/images/3-waves.jpg'%}/>
+                    <img style="margin-top: 20px; height: 200px" src={% static '/images/3waves.png'%}/>
+                    <ul class="mt-20">
+                        <li class="mt-20" >1st Wave: Dramatic increase in prescribed overdoses in 1990s</li>
+                        <li class="mt-20">2nd Wave: Illegal opioid Heroin sees a dramatic increase in overdose in 
+                            2010</li>
+                        <li class="mt-20">3rd Wave: Synthetic Opioids including Fentanyl sees a dramatic 
+                            increase in overdose in 2013</li>
+                    </ul>
+                    <li class="lsTitle mt-20">2016</li>
+                    <img style="margin-top: 20px; height: 200px" src={% static '/images/photo2Numbers2016.PNG'%}/>
+                    <img style="margin-top: 20px; height: 200px" src={% static '/images/Synthetic.PNG'%}/>
+                    <ul class="mt-20">
+                        <li class="mt-20" >The CDC collects numbers regarding: people with a use disorder and 
+                            the opioid type, number of overdoses and deaths.</li>
+                    </ul>
+                    <li class="lsTitle mt-20">2017 Trump declared the opioid crisis a public health emergency after the 
+                        yearly death toll from opioids reaches 70,237</li>
+                    <li class="lsTitle mt-20">2019-2020</li>
+                        <img style="margin-top: 20px; height: 200px" src={% static '/images/overdoseDeathRates2019.png'%}/>
+                        <ul class="mt-20">
+                            <li class="mt-20" >Over 100,000 people die in 2020 for a drug related overdose
+                                oThis is a 20% increase in average nationwide. </li>
+                        </ul>
+                </ul>
+        </div>
+        <div>
+            <div class="lTitle">Utah Opioid Analytics</div>
+            <ul>
+                <li class="lsTitle mt-20" >2020</li>
+                <img style="margin-top: 20px; height: 100px" src={% static '/images/drp1.PNG'%}/>
+                <ul class="mt-20">
+                    <li class="mt-20" >Utah department of Health states 24 individuals die every month in 
+                        Utah from opioid overdose.</li>
+                    <li class="mt-20" >Average drug overdose increases 14%</li>
+                </ul>
+                <li class="lsTitle mt-20" >Overdose Calls 2016-2020</li>
+                <img style="margin-top: 20px; height: 200px" src={% static '/images/overdoseCalls.PNG'%}/>
+                <ul class="mt-20">
+                    <li class="mt-20" >This is a picture of Salt Lake County alone and every spot a call 
+                        was made for an overdose</li>
+                </ul>
+
+                <li class="lsTitle mt-20" >Utah Drug Poisoning Map</li>
+                <img style="margin-top: 20px; height: 200px" src={% static '/images/dpois.PNG'%}/>
+                
+            </ul>
+        </div>
+
+        <div>
+            <div class="lTitle">Current Data Base</div>
+            <ul>
+                <li class="lsTitle mt-20" >In our data base of 25,000 prescribers across the nation: 919 of them 
+                    prescribe only opioids, 4,352 prescribers prescribe high amounts of opioids 
+                    compared to nonopioid drugs.</li>
+                <li class="lsTitle mt-20" >Out of the million prescriptions for opioid drugs the most prevalent 
+                    prescription is for is Hydrocodone Acetaminophen making up over 68% of the
+                    total opioid prescriptions.</li>
+                    <li class="lsTitle mt-20" > The state with the most opioid related deaths is California at 4,521 people 
+                        and Ohio coming in second with 2,744 people</li>
+                
+            </ul>
+        </div>
+
+        <div>
+            <div class="lTitle">How to help</div>
+            <ul>
+                <li class="lsTitle mt-20" >Learn what an overdose looks like.</li>
+                <ul class="mt-20">
+                    <li class="mt-20" >Key indicators include </li>
+                    <ul class="mt-10">
+                        <li class="mt-10" >slow, shallow, or erratic breathing</li>
+                        <li class="mt-10" >skin discoloration</li>
+                        
+                    </ul>
+                </ul>
+                <li class="lsTitle mt-20" >Learn basic steps</li>
+                <ul class="mt-20">
+                    <li class="mt-20" >STEP 1: CALL FOR HELP (CALL 911) ...</li>
+                    <li class="mt-20" >STEP 2: CHECK FOR SIGNS OF OPIOID OVERDOSE. ...</li>
+                    <li class="mt-20" >STEP 3: SUPPORT THE PERSON'S BREATHING. ...</li>
+                    <li class="mt-20" >STEP 4: ADMINISTER NALOXONE (if you have access to it) ...</li>
+                    <li class="mt-20" >STEP 5: MONITOR THE PERSON'S RESPONSE. ...</li>
+                    
+                </ul>
+                
+            </ul>
+        </div>
+        <div>
+            <div class="lTitle">Resources</div>
+            <ul class="mt-20">
+                <li class="mt-20" ><a style="color: blue; text-decoration: none;" href="https://www.cdc.gov/opioids/data/analysis-resources.html">https://www.cdc.gov/opioids/data/analysis-resources.html</a></li>
+                <li class="mt-20" ><a style="color: blue; text-decoration: none;" href="https://www.acton-ma.gov/619/Responding-to-an-Overdose">https://www.acton-ma.gov/619/Responding-to-an-Overdose</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div style="height: 200px; background-color: #93C5FD;">
+    <div style="max-width: 1000px; margin-left: auto; margin-right: auto; padding: 60px 5px 10px 5px;">
+        <div style="font-size: 53px; font-weight: bold; color: white; ">
+            RECOMMENDER
+        </div>
+        <div style="max-width: 500px; color: #272727">
+            Note: This feature is not yet functional.
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #F9F9F9; padding: 30px 0 50px 0;">
+    <div style="max-width: 700px; margin: 0px auto 0px auto; background-color: white; padding: 30px; border-radius: 10px;">
+        <form>
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between;">
+                <div style="width: 45%">
+                    <label>Prescriber Specialty:</label>
+                    <select style="display: block" name="pSpecialty">
+                        {% for s in specialties %}
+                            <option value={{s.id}}>{{s.specialtyName}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                 <div style="width: 45%">
+                    <label>Prescriber State:</label>
+                    <select style="display: block" name="pState">
+                        {% for s in states %}
+                            <option value={{s.id}}>{{s.stateName}}</option>
+                        {% endfor %}
+                    </select>
+                </div> 
+            </div>
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between;">
+                <div style="width: 45%"> 
+                    <label>Prescriber NPI:</label>
+                    <input type="number" placeholder="NPI #" name="pNpi" 
+                    style="border: 0px; border-bottom: 1px #272727 solid; width: 100%; padding: 14px 0 14px 0
+                        background-color: #F9F9F9; font-size: 18px; display: block;"/>
+                </div>
+                <div style="width: 45%">
+                    <label style="display: block">Prescriber Total Prescriptions:<label>
+                        <input type="number" placeholder="Ex: 72" name="pTotalPrescriptions" 
+                        style="border: 0px; border-bottom: 1px #272727 solid; width: 100%; padding: 14px 0 14px 0
+                            background-color: #F9F9F9; font-size: 18px; display: block;"/>
+                </div>
+            </div> 
+            <div style="margin-bottom: 20px; display: flex; justify-content: space-between;">
+                <div style="width: 45%"> 
+                    <label style="display: block">Prescriber Gender:<label>
+                    <select style="display: block" name="pGender">
+                        <option value="O">Other</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                    </select>
+                </div>
+                <div style="width: 45%">
+                    <label style="display: block">Is an opioid prescriber?<label>
+                        <select style="display: block" name="pOpioid">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                </div>
+            </div> 
+           
+    
+            <div style="display: flex; justify-content: center;">
+                <button type="submit" class="submitButton" style="width: 400px; color: white;">
+                    Get Recommended Drugs
+                </button>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+<div style="background-color: #F9F9F9; padding: 30px 0 300px 0;">
+    <div style="max-width: 700px; margin: 0px auto 0px auto; background-color: white; padding: 30px; border-radius: 10px;">
+        <div style="font-size: 24px; font-weight: bold">
+            Recommended Drugs
+        </div>
+        <div>
+            <div style="margin-top: 15px;">
+                1. Drug Name
+            </div>
+            <div style="margin-top: 15px;">
+                2. Drug Name
+            </div>
+            <div style="margin-top: 15px;">
+                3. Drug Name
+            </div>
+            <div style="margin-top: 15px;">
+                4. Drug Name
+            </div>
+            <div style="margin-top: 15px;">
+                5. Drug Name
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+{% endblock %}
